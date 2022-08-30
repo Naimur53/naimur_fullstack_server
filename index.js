@@ -13,10 +13,6 @@ var corsOptions = {
 }
 app.use(cors(corsOptions))
 app.use(express.json());
-app.use(fileUpload({
-    useTempFiles: true,
-    tempFileDir: '/tmp/'
-}));
 
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASS}@cluster0.icikx.mongodb.net/myjob?retryWrites=true&w=majority`;
 
